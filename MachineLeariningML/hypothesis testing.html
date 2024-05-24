@@ -1,0 +1,1271 @@
+
+
+    
+<!DOCTYPE html>
+
+
+
+
+<html lang="en" >
+<head >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile properties -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/pmc/static/CACHE/css/output.5d86d287c772.css" type="text/css">
+  
+  <link rel="stylesheet" href="/pmc/static/CACHE/css/output.edbd3424062b.css" type="text/css"><link rel="stylesheet" href="/pmc/static/CACHE/css/output.6cac19739226.css" type="text/css"><link rel="stylesheet" href="/pmc/static/CACHE/css/output.3766d7ad0d2d.css" type="text/css"><link rel="stylesheet" href="/pmc/static/CACHE/css/output.e3c3c2c84eb3.css" type="text/css">
+
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  
+<link type="text/css" href="/pmc/static/bundles/base/base.a2ef7ca69e4b20dff539.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="/corehtml/pmc/css/fonts/stix/stixfonts.css" type="text/css" /><link rel="stylesheet" href="/corehtml/pmc/css/3.18/pmcrefs1.min.css" type="text/css" /><link rel="stylesheet" href="/corehtml/pmc/css/pmc2020_1.1/ncbi_web.min.css?_=a" type="text/css" /><style type="text/css">.pmc-wm {background:transparent repeat-y top left;background-image:url(/corehtml/pmc/pmcgifs/wm-journal.gif);background-size: auto, contain}</style><style type="text/css">.print-view{display:block}</style>
+
+    <link type="text/css" href="/pmc/static/bundles/article/article.3c5d12ff2e4beea20136.css" rel="stylesheet" />
+    <link type="text/css" href="/pmc/static/django_pmc_cite_box/lib/cite-box.css" rel="stylesheet" />
+
+
+    <title>Hypothesis testing, type I and type II errors - PMC</title>
+
+  
+  <!-- Favicons -->
+  <link rel="shortcut icon" type="image/ico" href="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/favicons/favicon.png" />
+
+  <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+  <link rel="icon" type="image/png" sizes="192x192" href="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/favicons/favicon-192.png" />
+
+  <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/favicons/favicon-57.png">
+  <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/favicons/favicon-72.png">
+  <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/favicons/favicon-114.png">
+  <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/favicons/favicon-144.png">
+
+
+
+    
+        <!-- Logging params: Pinger defaults -->
+
+<meta name="ncbi_app" content="pmc-frontend" />
+
+<meta name="ncbi_db" content="pmc" />
+
+<meta name="ncbi_phid" content="322C76610224BC450000629E38808D47.1.m_2" />
+
+
+        <!-- Logging params: Pinger custom -->
+
+<meta name="ncbi_pdid" content="article" />
+
+<meta name="ncbi_op" content="retrieved" />
+
+<meta name="ncbi_app_version" content="1.6.0.post2+24fead6" />
+
+<meta name="ncbi_domain" content="indpsych" />
+
+<meta name="ncbi_type" content="fulltext" />
+
+<meta name="ncbi_pcid" content="/articles/PMC2996198/" />
+
+
+    
+
+
+    <script>
+        
+            var ncbiBaseUrl = "https://www.ncbi.nlm.nih.gov";
+        
+        var useOfficialGovtHeader = true;
+    </script>
+
+
+    <meta name="robots" content="INDEX,NOFOLLOW,NOARCHIVE" /><link rel="canonical" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2996198/" /><link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" /><meta name="citation_journal_title" content="Industrial Psychiatry Journal" /><meta name="citation_title" content="Hypothesis testing, type I and type II errors" /><meta name="citation_author" content="Amitav Banerjee" /><meta name="citation_author_institution" content="Department of Community Medicine, D. Y. Patil Medical College, Pune, India" /><meta name="citation_author" content="U. B. Chitnis" /><meta name="citation_author_institution" content="Department of Community Medicine, D. Y. Patil Medical College, Pune, India" /><meta name="citation_author" content="S. L. Jadhav" /><meta name="citation_author_institution" content="Department of Community Medicine, D. Y. Patil Medical College, Pune, India" /><meta name="citation_author" content="J. S. Bhawalkar" /><meta name="citation_author_institution" content="Department of Community Medicine, D. Y. Patil Medical College, Pune, India" /><meta name="citation_author" content="S. Chaudhury" /><meta name="citation_author_institution" content="Department of Psychiatry, RINPAS, Kanke, Ranchi, India" /><meta name="citation_publication_date" content="Jul-Dec 2009" /><meta name="citation_issue" content="2" /><meta name="citation_volume" content="18" /><meta name="citation_firstpage" content="127" /><meta name="citation_doi" content="10.4103/0972-6748.62274" /><meta name="citation_abstract_html_url" content="/pmc/articles/PMC2996198/?report=abstract" /><meta name="citation_fulltext_html_url" content="/pmc/articles/PMC2996198/" /><meta name="citation_pmid" content="21180491" /><meta name="DC.Title" content="Hypothesis testing, type I and type II errors" /><meta name="DC.Type" content="Text" /><meta name="DC.Publisher" content="Wolters Kluwer -- Medknow Publications" /><meta name="DC.Contributor" content="Amitav Banerjee" /><meta name="DC.Contributor" content="U. B. Chitnis" /><meta name="DC.Contributor" content="S. L. Jadhav" /><meta name="DC.Contributor" content="J. S. Bhawalkar" /><meta name="DC.Contributor" content="S. Chaudhury" /><meta name="DC.Date" content="Jul-Dec 2009" /><meta name="DC.Identifier" content="10.4103/0972-6748.62274" /><meta name="DC.Language" content="en" /><meta property="og:title" content="Hypothesis testing, type I and type II errors" /><meta property="og:type" content="article" /><meta property="og:description" content="Hypothesis testing is an important activity of empirical research and evidence-based medicine. A well worked up hypothesis is half the answer to the research question. For this, both knowledge of the subject derived from extensive review of the literature ..." /><meta property="og:url" content="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2996198/" /><meta property="og:site_name" content="PubMed Central (PMC)" /><meta property="og:image" content="https://www.ncbi.nlm.nih.gov/corehtml/pmc/pmcgifs/pmc-card-share.jpg?_=0" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@ncbi" />
+
+
+</head>
+<body >
+
+   
+    
+        <button
+          class="back-to-top back-to-top--bottom"
+          data-ga-category="pagination"
+          data-ga-action="back_to_top">
+          Back to Top
+        </button>
+    
+
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+    <!-- ========== BEGIN HEADER ========== -->
+<section class="usa-banner" style="display: none;">
+  <div class="usa-accordion">
+    <header class="usa-banner-header">
+      <div class="usa-grid usa-banner-inner">
+        <img src="https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/favicons/favicon-57.png" alt="U.S. flag" />
+        <p>An official website of the United States government</p>
+        <button
+          class="usa-accordion-button usa-banner-button"
+          aria-expanded="false"
+          aria-controls="gov-banner-top"
+        >
+          <span class="usa-banner-button-text">Here's how you know</span>
+        </button>
+      </div>
+    </header>
+    <div
+      class="usa-banner-content usa-grid usa-accordion-content"
+      id="gov-banner-top"
+    >
+      <div class="usa-banner-guidance-gov usa-width-one-half">
+        <img
+          class="usa-banner-icon usa-media_block-img"
+          src="https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/icon-dot-gov.svg"
+          alt="Dot gov"
+        />
+        <div class="usa-media_block-body">
+          <p>
+            <strong>The .gov means it’s official.</strong>
+            <br />
+            Federal government websites often end in .gov or .mil. Before
+            sharing sensitive information, make sure you’re on a federal
+            government site.
+          </p>
+        </div>
+      </div>
+      <div class="usa-banner-guidance-ssl usa-width-one-half">
+        <img
+          class="usa-banner-icon usa-media_block-img"
+          src="https://www.ncbi.nlm.nih.gov/coreutils/uswds/img/icon-https.svg"
+          alt="Https"
+        />
+        <div class="usa-media_block-body">
+          <p>
+            <strong>The site is secure.</strong>
+            <br />
+            The <strong>https://</strong> ensures that you are connecting to the
+            official website and that any information you provide is encrypted
+            and transmitted securely.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="usa-overlay"></div>
+<header class="ncbi-header" role="banner" data-section="Header">
+
+	<div class="usa-grid">
+		<div class="usa-width-one-whole">
+
+            <div class="ncbi-header__logo">
+                <a href="https://www.ncbi.nlm.nih.gov/" class="logo" aria-label="NCBI Logo" data-ga-action="click_image" data-ga-label="NIH NLM Logo">
+                  <img src="https://www.ncbi.nlm.nih.gov/coreutils/nwds/img/logos/AgencyLogo.svg" alt="NIH NLM Logo" />
+                </a>
+            </div>
+
+			<div class="ncbi-header__account">
+				<a id="account_login" href="https://account.ncbi.nlm.nih.gov" class="usa-button header-button" style="display:none" data-ga-action="open_menu" data-ga-label="account_menu">Log in</a>
+				<button id="account_info" class="header-button" style="display:none"
+						aria-controls="account_popup">
+					<span class="fa fa-user" aria-hidden="true"></span>
+					<span class="username desktop-only" aria-hidden="true" id="uname_short"></span>
+					<span class="sr-only">Show account info</span>
+				</button>
+			</div>
+
+			<div class="ncbi-popup-anchor">
+				<div class="ncbi-popup account-popup" id="account_popup" aria-hidden="true">
+					<div class="ncbi-popup-head">
+						<button class="ncbi-close-button" data-ga-action="close_menu" data-ga-label="account_menu"><span class="fa fa-times"></span><span class="usa-sr-only">Close</span></button>
+						<h4>Account</h4>
+					</div>
+					<div class="account-user-info">
+						Logged in as:<br/>
+						<b><span class="username" id="uname_long">username</span></b>
+					</div>
+					<div class="account-links">
+						<ul class="usa-unstyled-list">
+							<li><a id="account_myncbi" href="/myncbi/" class="set-base-url" data-ga-action="click_menu_item" data-ga-label="account_myncbi">Dashboard</a></li>
+							<li><a id="account_pubs" href="/myncbi/collections/bibliography/" class="set-base-url" data-ga-action="click_menu_item" data-ga-label="account_pubs">Publications</a></li>
+							<li><a id="account_settings" href="/account/settings/" class="set-base-url" data-ga-action="click_menu_item" data-ga-label="account_settings">Account settings</a></li>
+							<li><a id="account_logout" href="/account/signout/" class="set-base-url" data-ga-action="click_menu_item" data-ga-label="account_logout">Log out</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</header>
+<div role="navigation" aria-label="access keys">
+<a id="nws_header_accesskey_0" href="https://www.ncbi.nlm.nih.gov/guide/browsers/#ncbi_accesskeys" class="usa-sr-only" accesskey="0" tabindex="-1">Access keys</a>
+<a id="nws_header_accesskey_1" href="https://www.ncbi.nlm.nih.gov" class="usa-sr-only" accesskey="1" tabindex="-1">NCBI Homepage</a>
+<a id="nws_header_accesskey_2" href="/myncbi/" class="set-base-url usa-sr-only" accesskey="2" tabindex="-1">MyNCBI Homepage</a>
+<a id="nws_header_accesskey_3" href="#maincontent" class="usa-sr-only" accesskey="3" tabindex="-1">Main Content</a>
+<a id="nws_header_accesskey_4" href="#" class="usa-sr-only" accesskey="4" tabindex="-1">Main Navigation</a>
+</div>
+<section data-section="Alerts">
+	<div class="ncbi-alerts-placeholder"></div>
+</section>
+<!-- ========== END HEADER ========== -->
+
+    
+    
+        
+        <header class="pmc-header usa-header-extended" role="banner">
+    <div class="pmc-header__bar">
+        <div class="pmc-header__control usa-accordion">
+            
+                <button class="usa-menu-btn pmc-header--button pmc-header--left">
+                    <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                </button>
+            
+
+            <div class="usa-logo pmc-header__logo pmc-header--stretch
+                
+               " id="extended-mega-logo">
+                <div class="usa-logo-text">
+                    <a href="/pmc/" title="Home" aria-label="Home" ></a>
+                </div>
+            </div>
+            <button class="usa-accordion-button pmc-header--right pmc-header--button pmc-header__search--control pmc-header--right" aria-expanded="false" aria-controls="a1">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="pmc-header__search usa-accordion-content" id="a1">
+            <div role="search"  class="pmc-header--stretch"  >
+    <form class="usa-search " autocomplete="off">
+        <div>
+              <label class="usa-sr-only" for="pmc-search">Search PMC Full-Text Archive</label>
+              <span class="clearable">
+                <input
+                  required="required"
+                  autocomplete-url="/pmc/autocomplete/pmc/"
+                  placeholder="Search PMC Full-Text Archive"
+                  id="pmc-search" type="search" name="term"/>
+                  <i class="clear-btn" ></i>
+              </span>
+              <button type="submit" formaction="/pmc/">
+                <span class="usa-search-submit-text">Search in PMC</span>
+              </button>
+        </div>
+    </form>
+</div>
+
+
+            <ul class="usa-unstyled-list usa-nav-secondary-links pmc-header--offset-two">
+                    <li>
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/advanced" data-ga-action="featured_link" data-ga-label="advanced_search">
+                            Advanced Search
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="/pmc/about/userguide/" data-ga-action="featured_link"
+                        data-ga-label="user guide">
+                            User Guide
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+     <nav role="navigation" class="usa-nav ">
+        <button class="usa-nav-close">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <div class="usa-breadcrumb usa-breadcrumb--wrap usa-breadcrumb--hack">
+             
+    <ul class="usa-breadcrumb__list">
+            
+                <li class="usa-breadcrumb__list-item"
+                    >
+                    <a href="/pmc/journals/" class="navlink">Journal List</a>
+                </li>
+            
+                <li class="usa-breadcrumb__list-item"
+                    >
+                    <a class="navlink" href="/pmc/journals/1403/">Ind Psychiatry J</a>
+                </li>
+            
+                <li class="usa-breadcrumb__list-item"
+                    >
+                    <a class="navlink" href="/pmc/issues/192228/">v.18(2); Jul-Dec 2009</a>
+                </li>
+            
+                <li class="usa-breadcrumb__list-item"
+                     aria-current="page" >
+                    PMC2996198
+                </li>
+            
+    </ul>
+ 
+
+        </div>
+        
+        
+            <div class="pmc-sidebar pmc-sidebar-hack">
+                
+
+<div class="scroller">
+
+    
+        <section>
+                <h6>Other Formats</h6>
+                <ul class="pmc-sidebar__formats">
+                  <li class="other_item"><a href="/pmc/articles/PMC2996198/?report=printable" class="sidefm-pmclink">Printer Friendly</a></li>
+                </ul>
+        </section>
+    
+    <section>
+        <h6>Actions</h6>
+        <ul class="pmc-sidebar__actions">
+            <li>
+                <button role="button" class="citation-button citation-dialog-trigger ctxp"
+                        aria-label="Open dialog with citation text in different styles" data-ga-category="save_share" data-ga-action="cite" data-ga-label="open"
+                        data-all-citations-url="/pmc/resources/citations/2996198/"
+                        data-citation-style="nlm"
+                        data-download-format-link="/pmc/resources/citations/2996198/export/"
+                >
+                    <span class="button-label">Cite</span>
+                </button>
+            </li>
+            <li>
+                
+                    
+
+<link type="text/css" href="ncbi-overlay-block/src/overlay-block.css">
+<div class="collections-button-container" data-article-id="2996198" data-article-db="pmc">
+  <button class="collections-button collections-dialog-trigger"
+          aria-label="Save article in MyNCBI collections."
+          data-ga-category="collections_button"
+          data-ga-action="click"
+          data-ga-label="collections_button"
+          data-collections-open-dialog-enabled="false"
+          data-collections-open-dialog-url="https://www.ncbi.nlm.nih.gov/account?back_url=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2996198%2F%23open-collections-dialog"
+          data-in-collections="false">
+      <span class="button-label">Collections</span>
+  </button>
+  <div class="overlay" role="dialog">
+  <div id="collections-action-dialog"
+       class="dialog collections-dialog"
+       aria-hidden="true">
+    <div class="title">Add to Collections</div>
+    <div class="collections-action-panel action-panel">
+      
+
+
+<form id="collections-action-dialog-form"
+      class="collections-action-panel-form action-panel-content action-form action-panel-smaller-selectors"
+      data-existing-collections-url="/pmc/list-existing-collections/"
+      data-add-to-existing-collection-url="/pmc/add-to-existing-collection/"
+      data-create-and-add-to-new-collection-url="/pmc/create-and-add-to-new-collection/"
+      data-myncbi-max-collection-name-length="100"
+      data-collections-root-url="https://www.ncbi.nlm.nih.gov/myncbi/collections/">
+
+  <input type="hidden" name="csrfmiddlewaretoken" value="cLLikeaVugrpoF7QWfWPYjzWfLgXPFmdqCSYDRo9uy9hn74kSo4zeHnGpJkqD11V">
+
+  
+
+  <div class="choice-group" role="radiogroup">
+    <ul class="radio-group-items">
+      <li>
+        <input type="radio"
+               id="collections-action-dialog-new-header "
+               class="collections-new"
+               name="collections"
+               value="new"
+               data-ga-category="collections_button"
+               data-ga-action="click"
+               data-ga-label="collections_radio_new">
+        <label for="collections-action-dialog-new-header ">Create a new collection</label>
+      </li>
+      <li>
+        <input type="radio"
+               id="collections-action-dialog-existing-header "
+               class="collections-existing"
+               name="collections"
+               value="existing"
+               checked="true"
+               data-ga-category="collections_button"
+               data-ga-action="click"
+               data-ga-label="collections_radio_existing">
+        <label for="collections-action-dialog-existing-header ">Add to an existing collection</label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="controls-wrapper">
+    <div class="action-panel-control-wrap new-collections-controls">
+      <label for="collections-action-dialog-add-to-new" class="action-panel-label required-field-asterisk">
+        Name your collection:
+      </label>
+      <input
+        type="text"
+        name="add-to-new-collection"
+        id="collections-action-dialog-add-to-new"
+        class="collections-action-add-to-new"
+        pattern="[^&quot;&amp;=&lt;&gt;/]*" title="The following characters are not allowed in the Name field: &quot;&amp;=&lt;&gt;/"
+        maxlength=""
+        data-ga-category="collections_button"
+        data-ga-action="create_collection"
+        data-ga-label="non_favorties_collection">
+      <div class="collections-new-name-too-long usa-input-error-message selection-validation-message">
+        Name must be less than  characters
+      </div>
+    </div>
+    <div class="action-panel-control-wrap existing-collections-controls">
+      <label for="collections-action-dialog-add-to-existing" class="action-panel-label">
+        Choose a collection:
+      </label>
+      <select id="collections-action-dialog-add-to-existing"
+              class="action-panel-selector collections-action-add-to-existing"
+              data-ga-category="collections_button"
+              data-ga-action="select_collection"
+              data-ga-label="($('.collections-action-add-to-existing').val() === 'Favorites') ? 'Favorites' : 'non_favorites_collection'">
+      </select>
+      <div class="collections-retry-load-on-error usa-input-error-message selection-validation-message">
+        Unable to load your collection due to an error<br>
+        <a href="#">Please try again</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-panel-actions">
+    <button class="action-panel-submit"
+            type="submit"
+            data-loading-label="Adding..."
+            data-pinger-ignore
+            data-ga-category="collections_button"
+            data-ga-action="click"
+            data-ga-label="add">
+      Add
+    </button>
+    <button class="action-panel-cancel"
+            aria-label="Close 'Add to Collections' panel"
+            ref="linksrc=close_collections_panel"
+            aria-controls="collections-action-panel"
+            aria-expanded="false"
+            data-ga-category="collections_button"
+            data-ga-action="click"
+            data-ga-label="cancel">
+      Cancel
+    </button>
+  </div>
+</form>
+    </div>
+  </div>
+</div>
+</div>
+                
+            </li>
+
+        </ul>
+    </section>
+    
+        <section class="social-sharing">
+            <h6>Share</h6>
+            <ul class="pmc-sidebar__share">
+                <li><a class="fa-stack fa-lg" target="_blank" rel="noopener noreferrer" role="button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2996198%2F&amp;text=Hypothesis%20testing%2C%20type%20I%20and%20type%20II%20errors" alt="Share on Twitter"><i class="fa fa-twitter fa-stack-1x">&#160;</i></a></li> 
+<li><a class="fa-stack fa-lg" target="_blank" rel="noopener noreferrer" role="button" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2996198%2F" alt="Share on Facebook"><i class="fa fa-facebook fa-stack-1x">&#160;</i></a></li>
+                <li>
+                    <div class="share-permalink">
+                        <button class="trigger"  alt="Show article permalink" aria-expanded="false" aria-haspopup="true">
+                            <i class="fa-stack fa-lg" >
+                                <i class="fa fa-link fa-stack-1x">&nbsp;</i>
+                            </i>
+                        </button>
+                        <div class="dropdown dropdown-container" hidden>
+                              <div class="title">
+                                Permalink
+                              </div>
+                              <div class="content">
+                                  <input type="text" class="permalink-text" value="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2996198/" aria-label="Article permalink"><button class="permalink-copy-button usa-button-primary" title="Copy article permalink" data-ga-category="save_share" data-ga-action="link" data-ga-label="copy_link">
+                                      <span class="button-title">Copy</span>
+                                  </button>
+                              </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    
+    <section>
+        <h6>RESOURCES</h6>
+        <ul class="pmc-sidebar__resources">
+        
+            <li>
+                <div class="usa-accordion">
+                    <button
+                            data-ga-category="resources_accordion"
+                            data-ga-action="open_similar_articles"
+                            data-ga-label="/pmc/articles/PMC2996198/"
+                            class="usa-accordion-button"
+                            aria-controls="similar-articles-accordion-header"
+                            aria-expanded="false"
+                            data-action-open="open_similar_articles"
+                            data-action-close="close_similar_articles"
+                    >
+                        Similar articles
+                    </button>
+                    <div
+                            
+                                data-source-url="/pmc/resources/similar-article-links/21180491/"
+                            
+
+                         class="usa-accordion-content pmc-sidebar__resources--citations" id="similar-articles-accordion-header" aria-hidden="true">
+                        
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="usa-accordion">
+                    <button
+                            data-ga-category="resources_accordion"
+                            data-ga-action="open_cited_by"
+                            data-ga-label="/pmc/articles/PMC2996198/"
+                            class="usa-accordion-button"
+                            aria-controls="cited-by-accordion-header"
+                            aria-expanded="false"
+                            data-action-open="open_cited_by"
+                            data-action-close="close_cited_by"
+                    >
+                        Cited by other articles
+                    </button>
+                    <div
+                            
+                                data-source-url="/pmc/resources/cited-by-links/21180491/"
+                            
+                            class="usa-accordion-content pmc-sidebar__resources--citations"
+                            id="cited-by-accordion-header"
+                            aria-hidden="true"
+                    >
+                        
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="usa-accordion">
+                    <button
+                            data-ga-category="resources_accordion"
+                            data-ga-action="open_NCBI_links"
+                            data-ga-label="/pmc/articles/PMC2996198/"
+                            class="usa-accordion-button"
+                            aria-controls="links-accordion-header"
+                            aria-expanded="false"
+                            data-action-open="open_NCBI_links"
+                            data-action-close="close_NCBI_link"
+                    >
+                        Links to NCBI Databases
+                    </button>
+                    <div data-source-url="/pmc/resources/db-links/2996198/" class="usa-accordion-content" id="links-accordion-header" aria-hidden="true"></div>
+                </div>
+            </li>
+
+            
+        
+        </ul>
+    </section>
+
+ </div>
+            </div>
+        
+
+    </nav>
+
+</header>
+
+    
+    
+
+    <div class="usa-overlay"></div>
+    
+<main id="main-content" class="usa-grid usa-layout-docs pmc-main">
+    <article class="usa-width-three-fourths usa-layout-docs-main_content pmc-article">
+        <section class="usa-breadcrumb usa-breadcrumb--wrap">
+         
+    <ul class="usa-breadcrumb__list">
+            
+                <li class="usa-breadcrumb__list-item"
+                    >
+                    <a href="/pmc/journals/" class="navlink">Journal List</a>
+                </li>
+            
+                <li class="usa-breadcrumb__list-item"
+                    >
+                    <a class="navlink" href="/pmc/journals/1403/">Ind Psychiatry J</a>
+                </li>
+            
+                <li class="usa-breadcrumb__list-item"
+                    >
+                    <a class="navlink" href="/pmc/issues/192228/">v.18(2); Jul-Dec 2009</a>
+                </li>
+            
+                <li class="usa-breadcrumb__list-item"
+                     aria-current="page" >
+                    PMC2996198
+                </li>
+            
+    </ul>
+ 
+
+        </section>
+        
+  <div class="pmc-article__disclaimer" role="complementary" aria-label="Disclaimer note">
+    As a library, NLM provides access to scientific literature. Inclusion in an NLM database does not imply endorsement of, or agreement with,
+    the contents by NLM or the National Institutes of Health.<br/>
+    Learn more:
+    <a data-ga-category="Link click" data-ga-action="Disclaimer" data-ga-label="New disclaimer box" href="/pmc/about/disclaimer/">PMC Disclaimer</a>
+    |
+    <a data-ga-category="Link click" data-ga-action="PMC Copyright Notice" data-ga-label="New disclaimer box" href="/pmc/about/copyright/">
+        PMC Copyright Notice
+    </a>
+</div>
+
+        <section class="pmc-page-banner" role="banner">
+            
+                
+                    <div><img src="/corehtml/pmc/pmcgifs/logo-indpsych.gif" alt="Logo of indpsych" usemap="#logo-imagemap" /><map id="logo-imagemap" name="logo-imagemap"><area target="pmc_ext" rel="noopener noreferrer" shape="poly" coords="0,0,500,0,500,21,416,21,416,75,0,75" alt="Home" title="Home" href="http://www.industrialpsychiatry.org/" ref="reftype=publisher&amp;article-id=2996198&amp;issue-id=192228&amp;journal-id=1403&amp;FROM=Article%7CBanner&amp;TO=Publisher%7COther%7CN/A" /><area target="pmc_ext" rel="noopener noreferrer" shape="rect" coords="418,24,500,37" alt="Current issue" title="Current issue" href="http://www.industrialpsychiatry.org/currentissue.asp" ref="reftype=publisher&amp;article-id=2996198&amp;issue-id=192228&amp;journal-id=1403&amp;FROM=Article%7CBanner&amp;TO=Publisher%7COther%7CN/A" /><area target="pmc_ext" rel="noopener noreferrer" shape="rect" coords="418,42,500,53" alt="Instructions" title="Instructions" href="http://www.industrialpsychiatry.org/contributors.asp" ref="reftype=publisher&amp;article-id=2996198&amp;issue-id=192228&amp;journal-id=1403&amp;FROM=Article%7CBanner&amp;TO=Publisher%7COther%7CN/A" /><area target="pmc_ext" rel="noopener noreferrer" shape="rect" coords="418,59,500,75" alt="Submit article" title="Submit article" href="http://www.journalonweb.com/ipj" ref="reftype=publisher&amp;article-id=2996198&amp;issue-id=192228&amp;journal-id=1403&amp;FROM=Article%7CBanner&amp;TO=Publisher%7COther%7CN/A" /></map></div> 
+                
+            
+        </section>
+        <section  role="document">
+            
+                <div id="mc" class=" article lit-style content pmc-wm slang-all page-box"><!--main-content--><div class="jig-ncbiinpagenav" data-jigconfig="smoothScroll: false, allHeadingLevels: ['h2'], headingExclude: ':hidden,.nomenu'"><div class="fm-sec half_rhythm no_top_margin"><div class="fm-flexbox"><div class="fm-citation"><div class="citation-default"><div class="part1"><span id="pmcmata">Ind Psychiatry J.</span> 2009 Jul-Dec; 18(2): 127–131. </div><div class="part2">  <span class="doi"><span>doi: </span><a href="//doi.org/10.4103%2F0972-6748.62274" target="_blank" rel="noopener noreferrer" ref="reftype=other&amp;article-id=2996198&amp;issue-id=192228&amp;journal-id=1403&amp;FROM=Article%7CFront%20Matter&amp;TO=Content%20Provider%7CCrosslink%7CDOI">10.4103/0972-6748.62274</a></span></div></div></div><div class="fm-ids"><div class="fm-citation-pmcid"><span class="fm-citation-ids-label">PMCID: </span><span>PMC2996198</span></div><div class="fm-citation-pmid">PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/21180491">21180491</a></div></div></div><h1 class="content-title">Hypothesis testing, type I and type II errors</h1><div class="half_rhythm"><div class="contrib-group fm-author"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=Banerjee%20A%5BAuthor%5D" class="affpopup" co-rid="_co_idm140053157696192" co-class="co-affbox">Amitav Banerjee</a>,<sup></sup><sup></sup> <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Chitnis%20UB%5BAuthor%5D" class="affpopup" co-rid="_co_idm140053155197488" co-class="co-affbox">U. B. Chitnis</a>,<sup></sup> <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Jadhav%20SL%5BAuthor%5D" class="affpopup" co-rid="_co_idm140053211814592" co-class="co-affbox">S. L. Jadhav</a>,<sup></sup> <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Bhawalkar%20JS%5BAuthor%5D" class="affpopup" co-rid="_co_idm140053211812496" co-class="co-affbox">J. S. Bhawalkar</a>,<sup></sup> and  <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Chaudhury%20S%5BAuthor%5D" class="affpopup" co-rid="_co_idm140053157879072" co-class="co-affbox">S. Chaudhury</a><sup>1</sup></div><div style="display:none" class="contrib-group aff-tip"><div id="_co_idm140053157696192"><h3 class="no_margin">Amitav Banerjee</h3><p>Department of Community Medicine, D. Y. Patil Medical College, Pune, India</p><div>Find articles by <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Banerjee%20A%5BAuthor%5D">Amitav Banerjee</a></div></div><div id="_co_idm140053155197488"><h3 class="no_margin">U. B. Chitnis</h3><p>Department of Community Medicine, D. Y. Patil Medical College, Pune, India</p><div>Find articles by <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Chitnis%20UB%5BAuthor%5D">U. B. Chitnis</a></div></div><div id="_co_idm140053211814592"><h3 class="no_margin">S. L. Jadhav</h3><p>Department of Community Medicine, D. Y. Patil Medical College, Pune, India</p><div>Find articles by <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Jadhav%20SL%5BAuthor%5D">S. L. Jadhav</a></div></div><div id="_co_idm140053211812496"><h3 class="no_margin">J. S. Bhawalkar</h3><p>Department of Community Medicine, D. Y. Patil Medical College, Pune, India</p><div>Find articles by <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Bhawalkar%20JS%5BAuthor%5D">J. S. Bhawalkar</a></div></div><div id="_co_idm140053157879072"><h3 class="no_margin">S. Chaudhury</h3><p><sup>1</sup>Department of Psychiatry, RINPAS, Kanke, Ranchi, India</p><div>Find articles by <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Chaudhury%20S%5BAuthor%5D">S. Chaudhury</a></div></div></div></div><div class="half_rhythm"><div class="togglers fm-copyright-license"><a href="#" class="pmctoggle" rid="idm140053156640912_ai">Author information</a> <a href="#" class="pmctoggle" rid="idm140053156640912_cpl">Copyright and License information</a> <a href="/pmc/about/disclaimer/" style="margin-left: 1em">PMC Disclaimer</a></div><div class="fm-authors-info hide half_rhythm" id="idm140053156640912_ai" style="display:none"><div class="fm-affl" id="AF0001">Department of Community Medicine, D. Y. Patil Medical College, Pune, India</div><div class="fm-affl" id="AF0002"><sup>1</sup>Department of Psychiatry, RINPAS, Kanke, Ranchi, India</div><div id="cor1"><strong>Address for correspondence:</strong> Dr. (Prof.) Amitav Banerjee, Department of Community Medicine, D. Y. Patil Medical College, Pune - 411 018, India. E-mail: <a href="mailto:dev@null" data-email="moc.liamg@bvatima" class="oemail">moc.liamg@bvatima</a></div></div><div class="fm-article-notes half_rhythm"></div><div class="permissions half_rhythm hide" id="idm140053156640912_cpl" style="display:none"><div class="fm-copyright half_rhythm"><a href="/pmc/about/copyright/">Copyright</a> &#x000a9; Industrial Psychiatry Journal</div><div class="license half_rhythm">This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</div></div></div><div id="pmclinksbox" class="links-box whole_rhythm hidden" role="complementary" aria-label="Related or updated information about this article."></div></div><div class="sec"></div><div id="abstract-a.f.b.p" lang="en" class="tsec sec"><h2 class="head no_bottom_margin" id="abstract-a.f.b.ptitle">Abstract</h2><!--article-meta--><div><p class="p p-first-last">Hypothesis testing is an important activity of empirical research and evidence-based medicine. A well worked up hypothesis is half the answer to the research question. For this, both knowledge of the subject derived from extensive review of the literature and working knowledge of basic statistical concepts are desirable. The present paper discusses the methods of working up a good hypothesis and statistical concepts of hypothesis testing.</p></div><div class="sec"><strong class="kwd-title">Keywords: </strong><span class="kwd-text">Effect size, Hypothesis testing, Type I error, Type II error</span></div></div><div id="body-a.g" class="tsec sec"><h2 class="headless nomenu"></h2><p class="p p-first">Karl Popper is probably the most influential philosopher of science in the 20<sup>th</sup>century (Wulff <em>et al</em>., 1986). Many scientists, even those who do not usually read books on philosophy, are acquainted with the basic principles of his views on science. The popularity of Popper&#x02019;s philosophy is due partly to the fact that it has been well explained in simple terms by, among others, the Nobel Prize winner Peter Medawar (Medawar, 1969). Popper makes the very important point that empirical scientists (those who stress on observations only as the starting point of research) put the cart in front of the horse when they claim that science proceeds from observation to theory, since there is no such thing as a pure observation which does not depend on theory. Popper states, &#x0201c;&#x02026; the belief that we can start with pure observation alone, without anything in the nature of a theory, is absurd: As may be illustrated by the story of the man who dedicated his life to natural science, wrote down everything he could observe, and bequeathed his &#x02018;priceless&#x02019; collection of observations to the Royal Society to be used as inductive (empirical) evidence.</p></div><div id="sec1-1" class="tsec sec"><h2 class="head no_bottom_margin" id="sec1-1title">STARTING POINT OF RESEARCH: HYPOTHESIS OR OBSERVATION?</h2><p class="p p-first-last">The first step in the scientific process is not observation but the generation of a hypothesis which may then be tested critically by observations and experiments. Popper also makes the important claim that the goal of the scientist&#x02019;s efforts is not the verification but the falsification of the initial hypothesis. It is logically impossible to verify the truth of a general law by repeated observations, but, at least in principle, it is possible to falsify such a law by a single observation. Repeated observations of white swans did not prove that all swans are white, but the observation of a single black swan sufficed to falsify that general statement (Popper, 1976).</p></div><div id="sec1-2" class="tsec sec"><h2 class="head no_bottom_margin" id="sec1-2title">CHARACTERISTICS OF A GOOD HYPOTHESIS</h2><p class="p p-first">A good hypothesis must be based on a good research question. It should be simple, specific and stated in advance (Hulley <em>et al</em>., 2001).</p><div id="sec2-1" class="sec"><h3 id="sec2-1title">Hypothesis should be simple</h3><p class="p p-first-last">A simple hypothesis contains one predictor and one outcome variable, e.g. positive family history of schizophrenia increases the risk of developing the condition in first-degree relatives. Here the single predictor variable is positive family history of schizophrenia and the outcome variable is schizophrenia. A complex hypothesis contains more than one predictor variable or more than one outcome variable, e.g., a positive family history and stressful life events are associated with an increased incidence of Alzheimer&#x02019;s disease. Here there are 2 predictor variables, i.e., positive family history and stressful life events, while one outcome variable, i.e., Alzheimer&#x02019;s disease. Complex hypothesis like this cannot be easily tested with a single statistical test and should always be separated into 2 or more simple hypotheses.</p></div><div id="sec2-2" class="sec"><h3 id="sec2-2title">Hypothesis should be specific</h3><p class="p p-first-last">A specific hypothesis leaves no ambiguity about the subjects and variables, or about how the test of statistical significance will be applied. It uses concise operational definitions that summarize the nature and source of the subjects and the approach to measuring variables (History of medication with tranquilizers, as measured by review of medical store records and physicians&#x02019; prescriptions in the past year, is more common in patients who attempted suicides than in controls hospitalized for other conditions). This is a long-winded sentence, but it explicitly states the nature of predictor and outcome variables, how they will be measured and the research hypothesis. Often these details may be included in the study proposal and may not be stated in the research hypothesis. However, they should be clear in the mind of the investigator while conceptualizing the study.</p></div><div id="sec2-3" class="sec sec-last"><h3 id="sec2-3title">Hypothesis should be stated in advance</h3><p class="p p-first-last">The hypothesis must be stated in writing during the proposal state. This will help to keep the research effort focused on the primary objective and create a stronger basis for interpreting the study&#x02019;s results as compared to a hypothesis that emerges as a result of inspecting the data. The habit of post hoc hypothesis testing (common among researchers) is nothing but using third-degree methods on the data (data dredging), to yield at least something significant. This leads to overrating the occasional chance associations in the study.</p></div></div><div id="sec1-3" class="tsec sec"><h2 class="head no_bottom_margin" id="sec1-3title">TYPES OF HYPOTHESES</h2><p class="p p-first">For the purpose of testing statistical significance, hypotheses are classified by the way they describe the expected difference between the study groups.</p><div id="sec2-4" class="sec"><h3 id="sec2-4title">Null and alternative hypotheses</h3><p class="p p-first">The null hypothesis states that there is no association between the predictor and outcome variables in the population (There is no difference between tranquilizer habits of patients with attempted suicides and those of age- and sex- matched &#x0201c;control&#x0201d; patients hospitalized for other diagnoses). The null hypothesis is the formal basis for testing statistical significance. By starting with the proposition that there is no association, statistical tests can estimate the probability that an observed association could be due to chance.</p><p class="p p-last">The proposition that there is an association &#x02014; that patients with attempted suicides will report different tranquilizer habits from those of the controls &#x02014; is called the alternative hypothesis. The alternative hypothesis cannot be tested directly; it is accepted by exclusion if the test of statistical significance rejects the null hypothesis.</p></div><div id="sec2-5" class="sec sec-last"><h3 id="sec2-5title">One- and two-tailed alternative hypotheses</h3><p class="p p-first-last">A one-tailed (or one-sided) hypothesis specifies the direction of the association between the predictor and outcome variables. The prediction that patients of attempted suicides will have a higher rate of use of tranquilizers than control patients is a one-tailed hypothesis. A two-tailed hypothesis states only that an association exists; it does not specify the direction. The prediction that patients with attempted suicides will have a different rate of tranquilizer use &#x02014; either higher or lower than control patients &#x02014; is a two-tailed hypothesis. (The word tails refers to the tail ends of the statistical distribution such as the familiar bell-shaped normal curve that is used to test a hypothesis. One tail represents a positive effect or association; the other, a negative effect.) A one-tailed hypothesis has the statistical advantage of permitting a smaller sample size as compared to that permissible by a two-tailed hypothesis. Unfortunately, one-tailed hypotheses are not always appropriate; in fact, some investigators believe that they should never be used. However, they are appropriate when only one direction for the association is important or biologically meaningful. An example is the one-sided hypothesis that a drug has a greater frequency of side effects than a placebo; the possibility that the drug has fewer side effects than the placebo is not worth testing. Whatever strategy is used, it should be stated in advance; otherwise, it would lack statistical rigor. Data dredging after it has been collected and post hoc deciding to change over to one-tailed hypothesis testing to reduce the sample size and P value are indicative of lack of scientific integrity.</p></div></div><div id="sec1-4" class="tsec sec"><h2 class="head no_bottom_margin" id="sec1-4title">STATISTICAL PRINCIPLES OF HYPOTHESIS TESTING</h2><p class="p p-first">A hypothesis (for example, Tamiflu [oseltamivir], drug of choice in H1N1 influenza, is associated with an increased incidence of acute psychotic manifestations) is either true or false in the real world. Because the investigator cannot study all people who are at risk, he must test the hypothesis in a sample of that target population. No matter how many data a researcher collects, he can never absolutely prove (or disprove) his hypothesis. There will always be a need to draw inferences about phenomena in the population from events observed in the sample (Hulley <em>et al</em>., 2001). In some ways, the investigator&#x02019;s problem is similar to that faced by a judge judging a defendant [<a href="/pmc/articles/PMC2996198/table/T0001/" target="table" class="fig-table-link figpopup" rid-figpopup="T0001" rid-ob="ob-T0001" co-legend-rid=""><span>Table 1</span></a>]. The absolute truth whether the defendant committed the crime cannot be determined. Instead, the judge begins by presuming innocence &#x02014; the defendant did not commit the crime. The judge must decide whether there is sufficient evidence to reject the presumed innocence of the defendant; the standard is known as beyond a reasonable doubt. A judge can err, however, by convicting a defendant who is innocent, or by failing to convict one who is actually guilty. In similar fashion, the investigator starts by presuming the null hypothesis, or no association between the predictor and outcome variables in the population. Based on the data collected in his sample, the investigator uses statistical tests to determine whether there is sufficient evidence to reject the null hypothesis in favor of the alternative hypothesis that there is an association in the population. The standard for these tests is shown as the level of statistical significance.</p><!--table ft1--><!--table-wrap mode="anchored" t5--><div class="table-wrap anchored whole_rhythm" id="T0001"><h3>Table 1</h3><!--caption a7--><div class="caption"><p>The analogy between judge&#x02019;s decisions and statistical tests</p></div><div class="xtable"><table frame="hsides" rules="groups" class="rendered small default_table"><thead><tr><th align="left" rowspan="1" colspan="1">Judge&#x02019;s decision</th><th align="left" rowspan="1" colspan="1">Statistical test</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Innocence: The defendant did not commit crime</td><td align="left" rowspan="1" colspan="1">Null hypothesis: No association between Tamiflu and psychotic manifestations</td></tr><tr><td align="left" rowspan="1" colspan="1">Guilt: The defendant did commit the crime</td><td align="left" rowspan="1" colspan="1">Alternative hypothesis: There is association between Tamiflu and psychosis</td></tr><tr><td align="left" rowspan="1" colspan="1">Standard for rejecting innocence: Beyond a reasonable doubt</td><td align="left" rowspan="1" colspan="1">Standard for rejecting null hypothesis: Level of statistical significance (&#x000e0;)</td></tr><tr><td align="left" rowspan="1" colspan="1">Correct judgment: Convict a criminal</td><td align="left" rowspan="1" colspan="1">Correct inference: Conclude that there is an association when one does exist in the population</td></tr><tr><td align="left" rowspan="1" colspan="1">Correct judgment: Acquit an innocent person</td><td align="left" rowspan="1" colspan="1">Correct inference: Conclude that there is no association between Tamiflu and psychosis when one does not exist</td></tr><tr><td align="left" rowspan="1" colspan="1">Incorrect judgment: Convict an innocent person.</td><td align="left" rowspan="1" colspan="1">Incorrect inference (Type I error): Conclude that there is an association when there actually is none</td></tr><tr><td align="left" rowspan="1" colspan="1">Incorrect judgment: Acquit a criminal</td><td align="left" rowspan="1" colspan="1">Incorrect inference (Type II error): Conclude that there is no association when there actually is one</td></tr></tbody></table></div><div class="largeobj-link align_right" id="largeobj_idm140053212224016"><a target="object" rel="noopener" href="/pmc/articles/PMC2996198/table/T0001/?report=objectonly">Open in a separate window</a></div></div></div><div id="sec1-5" class="tsec sec"><h2 class="head no_bottom_margin" id="sec1-5title">TYPE I (ALSO KNOWN AS &#x02018;&#x003b1;&#x02019;) AND TYPE II (ALSO KNOWN AS &#x02018;&#x003b2;&#x02019;)ERRORS</h2><p class="p p-first">Just like a judge&#x02019;s conclusion, an investigator&#x02019;s conclusion may be wrong. Sometimes, by chance alone, a sample is not representative of the population. Thus the results in the sample do not reflect reality in the population, and the random error leads to an erroneous inference. A type I error (false-positive) occurs if an investigator rejects a null hypothesis that is actually true in the population; a type II error (false-negative) occurs if the investigator fails to reject a null hypothesis that is actually false in the population. Although type I and type II errors can never be avoided entirely, the investigator can reduce their likelihood by increasing the sample size (the larger the sample, the lesser is the likelihood that it will differ substantially from the population).</p><p class="p p-last">False-positive and false-negative results can also occur because of bias (observer, instrument, recall, etc.). (Errors due to bias, however, are not referred to as type I and type II errors.) Such errors are troublesome, since they may be difficult to detect and cannot usually be quantified.</p></div><div id="sec1-6" class="tsec sec"><h2 class="head no_bottom_margin" id="sec1-6title">EFFECT SIZE</h2><p class="p p-first-last">The likelihood that a study will be able to detect an association between a predictor variable and an outcome variable depends, of course, on the actual magnitude of that association in the target population. If it is large (such as 90% increase in the incidence of psychosis in people who are on Tamiflu), it will be easy to detect in the sample. Conversely, if the size of the association is small (such as 2% increase in psychosis), it will be difficult to detect in the sample. Unfortunately, the investigator often does not know the actual magnitude of the association &#x02014; one of the purposes of the study is to estimate it. Instead, the investigator must choose the size of the association that he would like to be able to detect in the sample. This quantity is known as the effect size. Selecting an appropriate effect size is the most difficult aspect of sample size planning. Sometimes, the investigator can use data from other studies or pilot tests to make an informed guess about a reasonable effect size. When there are no data with which to estimate it, he can choose the smallest effect size that would be clinically meaningful, for example, a 10% increase in the incidence of psychosis. Of course, from the public health point of view, even a 1% increase in psychosis incidence would be important. Thus the choice of the effect size is always somewhat arbitrary, and considerations of feasibility are often paramount. When the number of available subjects is limited, the investigator may have to work backward to determine whether the effect size that his study will be able to detect with that number of subjects is reasonable.</p></div><div id="sec1-7" class="tsec sec"><h2 class="head no_bottom_margin" id="sec1-7title">&#x003b1;,&#x003b2;,AND POWER</h2><p class="p p-first">After a study is completed, the investigator uses statistical tests to try to reject the null hypothesis in favor of its alternative (much in the same way that a prosecuting attorney tries to convince a judge to reject innocence in favor of guilt). Depending on whether the null hypothesis is true or false in the target population, and assuming that the study is free of bias, 4 situations are possible, as shown in <a href="/pmc/articles/PMC2996198/table/T0002/" target="table" class="fig-table-link figpopup" rid-figpopup="T0002" rid-ob="ob-T0002" co-legend-rid=""><span>Table 2</span></a> below. In 2 of these, the findings in the sample and reality in the population are concordant, and the investigator&#x02019;s inference will be correct. In the other 2 situations, either a type I (&#x003b1;) or a type II (&#x003b2;) error has been made, and the inference will be incorrect.</p><!--table ft1--><!--table-wrap mode="anchored" t5--><div class="table-wrap anchored whole_rhythm" id="T0002"><h3>Table 2</h3><!--caption a7--><div class="caption"><p>Truth in the population versus the results in the study sample: The four possibilities</p></div><div class="xtable"><table frame="hsides" rules="groups" class="rendered small default_table"><thead><tr><th align="left" rowspan="1" colspan="1">Truth in the population</th><th align="left" rowspan="1" colspan="1">Association + nt</th><th align="left" rowspan="1" colspan="1">No association</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Reject null hypothesis</td><td align="left" rowspan="1" colspan="1">Correct</td><td align="left" rowspan="1" colspan="1">Type I error</td></tr><tr><td align="left" rowspan="1" colspan="1">Fail to reject null hypothesis</td><td align="left" rowspan="1" colspan="1">Type II error</td><td align="left" rowspan="1" colspan="1">Correct</td></tr></tbody></table></div><div class="largeobj-link align_right" id="largeobj_idm140053171246768"><a target="object" rel="noopener" href="/pmc/articles/PMC2996198/table/T0002/?report=objectonly">Open in a separate window</a></div></div><p>The investigator establishes the maximum chance of making type I and type II errors in advance of the study. The probability of committing a type I error (rejecting the null hypothesis when it is actually true) is called &#x003b1; (alpha) the other name for this is the level of statistical significance.</p><p>If a study of Tamiflu and psychosis is designed with &#x003b1; = 0.05, for example, then the investigator has set 5% as the maximum chance of incorrectly rejecting the null hypothesis (and erroneously inferring that use of Tamiflu and psychosis incidence are associated in the population). This is the level of reasonable doubt that the investigator is willing to accept when he uses statistical tests to analyze the data after the study is completed.</p><p>The probability of making a type II error (failing to reject the null hypothesis when it is actually false) is called &#x003b2; (beta). The quantity (1 - &#x003b2;) is called power, the probability of observing an effect in the sample (if one), of a specified effect size or greater exists in the population.</p><p>If &#x003b2; is set at 0.10, then the investigator has decided that he is willing to accept a 10% chance of missing an association of a given effect size between Tamiflu and psychosis. This represents a power of 0.90, i.e., a 90% chance of finding an association of that size. For example, suppose that there really would be a 30% increase in psychosis incidence if the entire population took Tamiflu. Then 90 times out of 100, the investigator would observe an effect of that size or larger in his study. This does not mean, however, that the investigator will be absolutely unable to detect a smaller effect; just that he will have less than 90% likelihood of doing so.</p><p>Ideally alpha and beta errors would be set at zero, eliminating the possibility of false-positive and false-negative results. In practice they are made as small as possible. Reducing them, however, usually requires increasing the sample size. Sample size planning aims at choosing a sufficient number of subjects to keep alpha and beta at acceptably low levels without making the study unnecessarily expensive or difficult.</p><p class="p p-last">Many studies s<em>et al</em>pha at 0.05 and beta at 0.20 (a power of 0.80). These are somewhat arbitrary values, and others are sometimes used; the conventional range for alpha is between 0.01 and 0.10; and for beta, between 0.05 and 0.20. In general the investigator should choose a low value of alpha when the research question makes it particularly important to avoid a type I (false-positive) error, and he should choose a low value of beta when it is especially important to avoid a type II error.</p></div><div id="sec1-8" class="tsec sec"><h2 class="head no_bottom_margin" id="sec1-8title"><em>P</em> VALUE</h2><p class="p p-first-last">The null hypothesis acts like a punching bag: It is assumed to be true in order to shadowbox it into false with a statistical test. When the data are analyzed, such tests determine the <em>P</em> value, the probability of obtaining the study results by chance if the null hypothesis is true. The null hypothesis is rejected in favor of the alternative hypothesis if the P value is less than alpha, the predetermined level of statistical significance (Daniel, 2000). &#x0201c;Nonsignificant&#x0201d; results &#x02014; those with P value greater than alpha &#x02014; do not imply that there is no association in the population; they only mean that the association observed in the sample is small compared with what could have occurred by chance alone. For example, an investigator might find that men with family history of mental illness were twice as likely to develop schizophrenia as those with no family history, but with a <em>P</em> value of 0.09. This means that even if family history and schizophrenia were not associated in the population, there was a 9% chance of finding such an association due to random error in the sample. If the investigator had set the significance level at 0.05, he would have to conclude that the association in the sample was &#x0201c;not statistically significant.&#x0201d; It might be tempting for the investigator to change his mind about the level of statistical significance ex post facto and report the results &#x0201c;showed statistical significance at <em>P</em> &#x0003c; 10&#x0201d;. A better choice would be to report that the &#x0201c;results, although suggestive of an association, did not achieve statistical significance (<em>P</em> = .09)&#x0201d;. This solution acknowledges that statistical significance is not an &#x0201c;all or none&#x0201d; situation.</p></div><div id="sec1-9" class="tsec sec"><h2 class="head no_bottom_margin" id="sec1-9title">CONCLUSION</h2><p class="p p-first-last">Hypothesis testing is the sheet anchor of empirical research and in the rapidly emerging practice of evidence-based medicine. However, empirical research and, ipso facto, hypothesis testing have their limits. The empirical approach to research cannot eliminate uncertainty completely. At the best, it can quantify uncertainty. This uncertainty can be of 2 types: Type I error (falsely rejecting a null hypothesis) and type II error (falsely accepting a null hypothesis). The acceptable magnitudes of type I and type II errors are set in advance and are important for sample size calculations. Another important point to remember is that we cannot &#x02018;prove&#x02019; or &#x02018;disprove&#x02019; anything by hypothesis testing and statistical tests. We can only knock down or reject the null hypothesis and by default accept the alternative hypothesis. If we fail to reject the null hypothesis, we accept it by default.</p></div><div id="fn-group-a.h.a" class="tsec sec"><h2 class="head no_bottom_margin" id="fn-group-a.h.atitle">Footnotes</h2><!--back/fn-group--><div class="fm-sec half_rhythm small"><p class="fn sec" id="fn-a.h.a.a"><p class="p p-first-last"><strong>Source of Support:</strong> Nil</p></p><p class="fn sec" id="fn-a.h.a.b"> <p class="p p-first-last"><strong>Conflict of Interest:</strong> None declared.</p></p></div></div><div id="ref-list-a.h.b" class="tsec sec"><h2 class="head no_bottom_margin" id="ref-list-a.h.btitle">REFERENCES</h2><div class="ref-list-sec sec" id="reference-list"><ul class="back-ref-list" style="list-style-type:decimal;"><li id="CIT1"><span class="element-citation">Daniel W. W.  <span class="ref-journal">In: Biostatistics.</span> 7th ed. New York: John Wiley and Sons, Inc; 2002. Hypothesis testing; pp. 204–294. <span class="nowrap">[<a href="https://scholar.google.com/scholar_lookup?title=In:+Biostatistics&amp;author=W.+W+Daniel&amp;publication_year=2002&amp;" target="_blank" rel="noopener noreferrer" ref="reftype=other&amp;article-id=2996198&amp;issue-id=192228&amp;journal-id=1403&amp;FROM=Article%7CCitationRef&amp;TO=Content%20Provider%7CLink%7CGoogle%20Scholar">Google Scholar</a>]</span></span></li><li id="CIT2"><span class="element-citation">Hulley S. B, Cummings S. R, Browner W. S, Grady D, Hearst N, Newman T. B.  2nd ed. Philadelphia: Lippincott Williams and Wilkins; 2001. Getting ready to estimate sample size: Hypothesis and underlying principles In: Designing Clinical Research-An epidemiologic approach; pp. 51–63. <span class="nowrap">[<a href="https://scholar.google.com/scholar?q=Hulley+S.+B+Cummings+S.+R+Browner+W.+S+Grady+D+Hearst+N+Newman+T.+B+Getting+ready+to+estimate+sample+size:+Hypothesis+and+underlying+principles+In:+Designing+Clinical+Research-An+epidemiologic+approach+2001+2nd+ed+Philadelphia+Lippincott+Williams+and+Wilkins+51+63+" target="_blank" rel="noopener noreferrer" ref="reftype=other&amp;article-id=2996198&amp;issue-id=192228&amp;journal-id=1403&amp;FROM=Article%7CCitationRef&amp;TO=Content%20Provider%7CLink%7CGoogle%20Scholar">Google Scholar</a>]</span></span></li><li id="CIT3"><span class="element-citation">Medawar P. B.  Philadelphia: American Philosophical Society; 1969. Induction and intuition in scientific thought. <span class="nowrap">[<a href="https://scholar.google.com/scholar?q=Medawar+P.+B+Induction+and+intuition+in+scientific+thought+1969+Philadelphia+American+Philosophical+Society+" target="_blank" rel="noopener noreferrer" ref="reftype=other&amp;article-id=2996198&amp;issue-id=192228&amp;journal-id=1403&amp;FROM=Article%7CCitationRef&amp;TO=Content%20Provider%7CLink%7CGoogle%20Scholar">Google Scholar</a>]</span></span></li><li id="CIT4"><span class="element-citation">Popper K.  Unended Quest. An Intellectual Autobiography. Fontana Collins; p. 42. <span class="nowrap">[<a href="https://scholar.google.com/scholar?q=Popper+K+Unended+Quest.+An+Intellectual+Autobiography.+Fontana+Collins+42+" target="_blank" rel="noopener noreferrer" ref="reftype=other&amp;article-id=2996198&amp;issue-id=192228&amp;journal-id=1403&amp;FROM=Article%7CCitationRef&amp;TO=Content%20Provider%7CLink%7CGoogle%20Scholar">Google Scholar</a>]</span></span></li><li id="CIT5"><span class="element-citation">Wulff H. R, Pedersen S. A, Rosenberg R.  Oxford: Blackwell Scientific Publicatons; Empirism and Realism: A philosophical problem. In: Philosophy of Medicine. <span class="nowrap">[<a href="https://scholar.google.com/scholar?q=Wulff+H.+R+Pedersen+S.+A+Rosenberg+R+Empirism+and+Realism:+A+philosophical+problem.+In:+Philosophy+of+Medicine+Oxford+Blackwell+Scientific+Publicatons+" target="_blank" rel="noopener noreferrer" ref="reftype=other&amp;article-id=2996198&amp;issue-id=192228&amp;journal-id=1403&amp;FROM=Article%7CCitationRef&amp;TO=Content%20Provider%7CLink%7CGoogle%20Scholar">Google Scholar</a>]</span></span></li></ul></div></div></div><!--post-content--><div class="courtesy-note whole_rhythm small"><hr /><div class="half_rhythm">Articles from <span class="acknowledgment-journal-title">Industrial Psychiatry Journal</span> are provided here courtesy of <strong>Wolters Kluwer -- Medknow Publications</strong></div><hr /></div><div id="body-link-poppers"><span></span></div></div>
+            
+        </section>
+    </article>
+    <aside class="usa-width-one-fourth usa-layout-docs-sidenav pmc-sidebar">
+         
+  
+
+<div class="scroller">
+
+    
+        <section>
+                <h6>Other Formats</h6>
+                <ul class="pmc-sidebar__formats">
+                  <li class="other_item"><a href="/pmc/articles/PMC2996198/?report=printable" class="sidefm-pmclink">Printer Friendly</a></li>
+                </ul>
+        </section>
+    
+    <section>
+        <h6>Actions</h6>
+        <ul class="pmc-sidebar__actions">
+            <li>
+                <button role="button" class="citation-button citation-dialog-trigger ctxp"
+                        aria-label="Open dialog with citation text in different styles" data-ga-category="save_share" data-ga-action="cite" data-ga-label="open"
+                        data-all-citations-url="/pmc/resources/citations/2996198/"
+                        data-citation-style="nlm"
+                        data-download-format-link="/pmc/resources/citations/2996198/export/"
+                >
+                    <span class="button-label">Cite</span>
+                </button>
+            </li>
+            <li>
+                
+                    
+
+<link type="text/css" href="ncbi-overlay-block/src/overlay-block.css">
+<div class="collections-button-container" data-article-id="2996198" data-article-db="pmc">
+  <button class="collections-button collections-dialog-trigger"
+          aria-label="Save article in MyNCBI collections."
+          data-ga-category="collections_button"
+          data-ga-action="click"
+          data-ga-label="collections_button"
+          data-collections-open-dialog-enabled="false"
+          data-collections-open-dialog-url="https://www.ncbi.nlm.nih.gov/account?back_url=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2996198%2F%23open-collections-dialog"
+          data-in-collections="false">
+      <span class="button-label">Collections</span>
+  </button>
+  <div class="overlay" role="dialog">
+  <div id="collections-action-dialog"
+       class="dialog collections-dialog"
+       aria-hidden="true">
+    <div class="title">Add to Collections</div>
+    <div class="collections-action-panel action-panel">
+      
+
+
+<form id="collections-action-dialog-form"
+      class="collections-action-panel-form action-panel-content action-form action-panel-smaller-selectors"
+      data-existing-collections-url="/pmc/list-existing-collections/"
+      data-add-to-existing-collection-url="/pmc/add-to-existing-collection/"
+      data-create-and-add-to-new-collection-url="/pmc/create-and-add-to-new-collection/"
+      data-myncbi-max-collection-name-length="100"
+      data-collections-root-url="https://www.ncbi.nlm.nih.gov/myncbi/collections/">
+
+  <input type="hidden" name="csrfmiddlewaretoken" value="cLLikeaVugrpoF7QWfWPYjzWfLgXPFmdqCSYDRo9uy9hn74kSo4zeHnGpJkqD11V">
+
+  
+
+  <div class="choice-group" role="radiogroup">
+    <ul class="radio-group-items">
+      <li>
+        <input type="radio"
+               id="collections-action-dialog-new-aside "
+               class="collections-new"
+               name="collections"
+               value="new"
+               data-ga-category="collections_button"
+               data-ga-action="click"
+               data-ga-label="collections_radio_new">
+        <label for="collections-action-dialog-new-aside ">Create a new collection</label>
+      </li>
+      <li>
+        <input type="radio"
+               id="collections-action-dialog-existing-aside "
+               class="collections-existing"
+               name="collections"
+               value="existing"
+               checked="true"
+               data-ga-category="collections_button"
+               data-ga-action="click"
+               data-ga-label="collections_radio_existing">
+        <label for="collections-action-dialog-existing-aside ">Add to an existing collection</label>
+      </li>
+    </ul>
+  </div>
+
+  <div class="controls-wrapper">
+    <div class="action-panel-control-wrap new-collections-controls">
+      <label for="collections-action-dialog-add-to-new" class="action-panel-label required-field-asterisk">
+        Name your collection:
+      </label>
+      <input
+        type="text"
+        name="add-to-new-collection"
+        id="collections-action-dialog-add-to-new"
+        class="collections-action-add-to-new"
+        pattern="[^&quot;&amp;=&lt;&gt;/]*" title="The following characters are not allowed in the Name field: &quot;&amp;=&lt;&gt;/"
+        maxlength=""
+        data-ga-category="collections_button"
+        data-ga-action="create_collection"
+        data-ga-label="non_favorties_collection">
+      <div class="collections-new-name-too-long usa-input-error-message selection-validation-message">
+        Name must be less than  characters
+      </div>
+    </div>
+    <div class="action-panel-control-wrap existing-collections-controls">
+      <label for="collections-action-dialog-add-to-existing" class="action-panel-label">
+        Choose a collection:
+      </label>
+      <select id="collections-action-dialog-add-to-existing"
+              class="action-panel-selector collections-action-add-to-existing"
+              data-ga-category="collections_button"
+              data-ga-action="select_collection"
+              data-ga-label="($('.collections-action-add-to-existing').val() === 'Favorites') ? 'Favorites' : 'non_favorites_collection'">
+      </select>
+      <div class="collections-retry-load-on-error usa-input-error-message selection-validation-message">
+        Unable to load your collection due to an error<br>
+        <a href="#">Please try again</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-panel-actions">
+    <button class="action-panel-submit"
+            type="submit"
+            data-loading-label="Adding..."
+            data-pinger-ignore
+            data-ga-category="collections_button"
+            data-ga-action="click"
+            data-ga-label="add">
+      Add
+    </button>
+    <button class="action-panel-cancel"
+            aria-label="Close 'Add to Collections' panel"
+            ref="linksrc=close_collections_panel"
+            aria-controls="collections-action-panel"
+            aria-expanded="false"
+            data-ga-category="collections_button"
+            data-ga-action="click"
+            data-ga-label="cancel">
+      Cancel
+    </button>
+  </div>
+</form>
+    </div>
+  </div>
+</div>
+</div>
+                
+            </li>
+
+        </ul>
+    </section>
+    
+        <section class="social-sharing">
+            <h6>Share</h6>
+            <ul class="pmc-sidebar__share">
+                <li><a class="fa-stack fa-lg" target="_blank" rel="noopener noreferrer" role="button" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2996198%2F&amp;text=Hypothesis%20testing%2C%20type%20I%20and%20type%20II%20errors" alt="Share on Twitter"><i class="fa fa-twitter fa-stack-1x">&#160;</i></a></li> 
+<li><a class="fa-stack fa-lg" target="_blank" rel="noopener noreferrer" role="button" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpmc%2Farticles%2FPMC2996198%2F" alt="Share on Facebook"><i class="fa fa-facebook fa-stack-1x">&#160;</i></a></li>
+                <li>
+                    <div class="share-permalink">
+                        <button class="trigger"  alt="Show article permalink" aria-expanded="false" aria-haspopup="true">
+                            <i class="fa-stack fa-lg" >
+                                <i class="fa fa-link fa-stack-1x">&nbsp;</i>
+                            </i>
+                        </button>
+                        <div class="dropdown dropdown-container" hidden>
+                              <div class="title">
+                                Permalink
+                              </div>
+                              <div class="content">
+                                  <input type="text" class="permalink-text" value="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2996198/" aria-label="Article permalink"><button class="permalink-copy-button usa-button-primary" title="Copy article permalink" data-ga-category="save_share" data-ga-action="link" data-ga-label="copy_link">
+                                      <span class="button-title">Copy</span>
+                                  </button>
+                              </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    
+    <section>
+        <h6>RESOURCES</h6>
+        <ul class="pmc-sidebar__resources">
+        
+            <li>
+                <div class="usa-accordion">
+                    <button
+                            data-ga-category="resources_accordion"
+                            data-ga-action="open_similar_articles"
+                            data-ga-label="/pmc/articles/PMC2996198/"
+                            class="usa-accordion-button"
+                            aria-controls="similar-articles-accordion-aside"
+                            aria-expanded="false"
+                            data-action-open="open_similar_articles"
+                            data-action-close="close_similar_articles"
+                    >
+                        Similar articles
+                    </button>
+                    <div
+                            
+                                data-source-url="/pmc/resources/similar-article-links/21180491/"
+                            
+
+                         class="usa-accordion-content pmc-sidebar__resources--citations" id="similar-articles-accordion-aside" aria-hidden="true">
+                        
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="usa-accordion">
+                    <button
+                            data-ga-category="resources_accordion"
+                            data-ga-action="open_cited_by"
+                            data-ga-label="/pmc/articles/PMC2996198/"
+                            class="usa-accordion-button"
+                            aria-controls="cited-by-accordion-aside"
+                            aria-expanded="false"
+                            data-action-open="open_cited_by"
+                            data-action-close="close_cited_by"
+                    >
+                        Cited by other articles
+                    </button>
+                    <div
+                            
+                                data-source-url="/pmc/resources/cited-by-links/21180491/"
+                            
+                            class="usa-accordion-content pmc-sidebar__resources--citations"
+                            id="cited-by-accordion-aside"
+                            aria-hidden="true"
+                    >
+                        
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="usa-accordion">
+                    <button
+                            data-ga-category="resources_accordion"
+                            data-ga-action="open_NCBI_links"
+                            data-ga-label="/pmc/articles/PMC2996198/"
+                            class="usa-accordion-button"
+                            aria-controls="links-accordion-aside"
+                            aria-expanded="false"
+                            data-action-open="open_NCBI_links"
+                            data-action-close="close_NCBI_link"
+                    >
+                        Links to NCBI Databases
+                    </button>
+                    <div data-source-url="/pmc/resources/db-links/2996198/" class="usa-accordion-content" id="links-accordion-aside" aria-hidden="true"></div>
+                </div>
+            </li>
+
+            
+        
+        </ul>
+    </section>
+
+ </div>
+
+    </aside>
+</main>
+
+    <div class="overlay" role="dialog" aria-label="Citation Dialog">
+  <div class="dialog citation-dialog">
+    <button class="close-overlay" tabindex="1">[x]</button>
+    <div class="title">Cite</div>
+    <div class="citation-text-block">
+  <div class="citation-text"></div>
+  <div class="citation-actions">
+    <button
+      class="copy-button dialog-focus"
+      data-ga-category="save_share"
+      data-ga-action="cite"
+      data-ga-label="copy"
+      tabindex="2">
+      Copy
+    </button>
+
+      <a href="#"
+              class="export-button"
+              data-ga-category="save_share"
+              data-ga-action="cite"
+              data-ga-label="download"
+              title="Download a file for external citation management software"
+              tabindex="3">
+          <span class="title">Download .nbib</span>
+          <span class="title-mobile">.nbib</span>
+      </a>
+
+
+    
+
+<div class="citation-style-selector-wrapper">
+  <label class="selector-label">Format:</label>
+  <select aria-label="Format" class="citation-style-selector" tabindex="4" >
+    
+      <option data-style-url-name="ama"
+              value="AMA"
+              >
+        AMA
+      </option>
+    
+      <option data-style-url-name="apa"
+              value="APA"
+              >
+        APA
+      </option>
+    
+      <option data-style-url-name="mla"
+              value="MLA"
+              >
+        MLA
+      </option>
+    
+      <option data-style-url-name="nlm"
+              value="NLM"
+              selected="selected">
+        NLM
+      </option>
+    
+  </select>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+
+     <!-- ========== BEGIN FOOTER ========== -->
+ <footer>
+      <section class="icon-section">
+        <div id="icon-section-header" class="icon-section_header">Follow NCBI</div>
+        <div class="grid-container container">
+          <div class="icon-section_container">
+            <a class="footer-icon" id="footer_twitter" href="https://twitter.com/ncbi" aria-label="Twitter"><svg
+                data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                <defs>
+                  <style>
+                    .cls-11 {
+                      fill: #737373;
+                    }
+                  </style>
+                </defs>
+                <title>Twitter</title>
+                <path class="cls-11"
+                  d="M250.11,105.48c-7,3.14-13,3.25-19.27.14,8.12-4.86,8.49-8.27,11.43-17.46a78.8,78.8,0,0,1-25,9.55,39.35,39.35,0,0,0-67,35.85,111.6,111.6,0,0,1-81-41.08A39.37,39.37,0,0,0,81.47,145a39.08,39.08,0,0,1-17.8-4.92c0,.17,0,.33,0,.5a39.32,39.32,0,0,0,31.53,38.54,39.26,39.26,0,0,1-17.75.68,39.37,39.37,0,0,0,36.72,27.3A79.07,79.07,0,0,1,56,223.34,111.31,111.31,0,0,0,116.22,241c72.3,0,111.83-59.9,111.83-111.84,0-1.71,0-3.4-.1-5.09C235.62,118.54,244.84,113.37,250.11,105.48Z">
+                </path>
+              </svg></a>
+            <a class="footer-icon" id="footer_facebook" href="https://www.facebook.com/ncbi.nlm" aria-label="Facebook"><svg
+                data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                <title>Facebook</title>
+                <path class="cls-11"
+                  d="M210.5,115.12H171.74V97.82c0-8.14,5.39-10,9.19-10h27.14V52l-39.32-.12c-35.66,0-42.42,26.68-42.42,43.77v19.48H99.09v36.32h27.24v109h45.41v-109h35Z">
+                </path>
+              </svg></a>
+            <a class="footer-icon" id="footer_linkedin"
+              href="https://www.linkedin.com/company/ncbinlm"
+              aria-label="LinkedIn"><svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                <title>LinkedIn</title>
+                <path class="cls-11"
+                  d="M101.64,243.37H57.79v-114h43.85Zm-22-131.54h-.26c-13.25,0-21.82-10.36-21.82-21.76,0-11.65,8.84-21.15,22.33-21.15S101.7,78.72,102,90.38C102,101.77,93.4,111.83,79.63,111.83Zm100.93,52.61A17.54,17.54,0,0,0,163,182v61.39H119.18s.51-105.23,0-114H163v13a54.33,54.33,0,0,1,34.54-12.66c26,0,44.39,18.8,44.39,55.29v58.35H198.1V182A17.54,17.54,0,0,0,180.56,164.44Z">
+                </path>
+              </svg></a>
+            <a class="footer-icon" id="footer_github" href="https://github.com/ncbi" aria-label="GitHub"><svg
+                data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+                <defs>
+                  <style>
+                    .cls-11,
+                    .cls-12 {
+                      fill: #737373;
+                    }
+
+                    .cls-11 {
+                      fill-rule: evenodd;
+                    }
+                  </style>
+                </defs>
+                <title>GitHub</title>
+                <path class="cls-11"
+                  d="M151.36,47.28a105.76,105.76,0,0,0-33.43,206.1c5.28,1,7.22-2.3,7.22-5.09,0-2.52-.09-10.85-.14-19.69-29.42,6.4-35.63-12.48-35.63-12.48-4.81-12.22-11.74-15.47-11.74-15.47-9.59-6.56.73-6.43.73-6.43,10.61.75,16.21,10.9,16.21,10.9,9.43,16.17,24.73,11.49,30.77,8.79,1-6.83,3.69-11.5,6.71-14.14C108.57,197.1,83.88,188,83.88,147.51a40.92,40.92,0,0,1,10.9-28.39c-1.1-2.66-4.72-13.42,1-28,0,0,8.88-2.84,29.09,10.84a100.26,100.26,0,0,1,53,0C198,88.3,206.9,91.14,206.9,91.14c5.76,14.56,2.14,25.32,1,28a40.87,40.87,0,0,1,10.89,28.39c0,40.62-24.74,49.56-48.29,52.18,3.79,3.28,7.17,9.71,7.17,19.58,0,14.15-.12,25.54-.12,29,0,2.82,1.9,6.11,7.26,5.07A105.76,105.76,0,0,0,151.36,47.28Z">
+                </path>
+                <path class="cls-12"
+                  d="M85.66,199.12c-.23.52-1.06.68-1.81.32s-1.2-1.06-.95-1.59,1.06-.69,1.82-.33,1.21,1.07.94,1.6Zm-1.3-1">
+                </path>
+                <path class="cls-12"
+                  d="M90,203.89c-.51.47-1.49.25-2.16-.49a1.61,1.61,0,0,1-.31-2.19c.52-.47,1.47-.25,2.17.49s.82,1.72.3,2.19Zm-1-1.08">
+                </path>
+                <path class="cls-12"
+                  d="M94.12,210c-.65.46-1.71,0-2.37-.91s-.64-2.07,0-2.52,1.7,0,2.36.89.65,2.08,0,2.54Zm0,0"></path>
+                <path class="cls-12"
+                  d="M99.83,215.87c-.58.64-1.82.47-2.72-.41s-1.18-2.06-.6-2.7,1.83-.46,2.74.41,1.2,2.07.58,2.7Zm0,0">
+                </path>
+                <path class="cls-12"
+                  d="M107.71,219.29c-.26.82-1.45,1.2-2.64.85s-2-1.34-1.74-2.17,1.44-1.23,2.65-.85,2,1.32,1.73,2.17Zm0,0">
+                </path>
+                <path class="cls-12"
+                  d="M116.36,219.92c0,.87-1,1.59-2.24,1.61s-2.29-.68-2.3-1.54,1-1.59,2.26-1.61,2.28.67,2.28,1.54Zm0,0">
+                </path>
+                <path class="cls-12"
+                  d="M124.42,218.55c.15.85-.73,1.72-2,1.95s-2.37-.3-2.52-1.14.73-1.75,2-2,2.37.29,2.53,1.16Zm0,0"></path>
+              </svg></a>
+            <a class="footer-icon" id="footer_blog" href="https://ncbiinsights.ncbi.nlm.nih.gov/" aria-label="Blog">
+              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><style>.cls-1{fill:#737373;}</style></defs><path class="cls-1" d="M14,30a4,4,0,1,1-4-4,4,4,0,0,1,4,4Zm11,3A19,19,0,0,0,7.05,15a1,1,0,0,0-1,1v3a1,1,0,0,0,.93,1A14,14,0,0,1,20,33.07,1,1,0,0,0,21,34h3a1,1,0,0,0,1-1Zm9,0A28,28,0,0,0,7,6,1,1,0,0,0,6,7v3a1,1,0,0,0,1,1A23,23,0,0,1,29,33a1,1,0,0,0,1,1h3A1,1,0,0,0,34,33Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-fluid bg-primary">
+        <div class="container pt-5">
+          <div class="row mt-3">
+            <div class="col-lg-3 col-12">
+              <p><a class="text-white" href="https://www.nlm.nih.gov/socialmedia/index.html">Connect with NLM</a></p>
+              <ul class="list-inline social_media">
+                <li class="list-inline-item"><a href="https://twitter.com/NLM_NIH" aria-label="Twitter"
+                    target="_blank" rel="noopener noreferrer"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249 249"
+                      style="enable-background:new 0 0 249 249;" xml:space="preserve">
+                      <style type="text/css">
+                        .st20 {
+                          fill: #FFFFFF;
+                        }
+
+                        .st30 {
+                          fill: none;
+                          stroke: #FFFFFF;
+                          stroke-width: 8;
+                          stroke-miterlimit: 10;
+                        }
+                      </style>
+                      <title>SM-Twitter</title>
+                      <g>
+                        <g>
+                          <g>
+                            <path class="st20" d="M192.9,88.1c-5,2.2-9.2,2.3-13.6,0.1c5.7-3.4,6-5.8,8.1-12.3c-5.4,3.2-11.4,5.5-17.6,6.7
+                                                c-10.5-11.2-28.1-11.7-39.2-1.2c-7.2,6.8-10.2,16.9-8,26.5c-22.3-1.1-43.1-11.7-57.2-29C58,91.6,61.8,107.9,74,116
+                                                c-4.4-0.1-8.7-1.3-12.6-3.4c0,0.1,0,0.2,0,0.4c0,13.2,9.3,24.6,22.3,27.2c-4.1,1.1-8.4,1.3-12.5,0.5c3.6,11.3,14,19,25.9,19.3
+                                                c-11.6,9.1-26.4,13.2-41.1,11.5c12.7,8.1,27.4,12.5,42.5,12.5c51,0,78.9-42.2,78.9-78.9c0-1.2,0-2.4-0.1-3.6
+                                                C182.7,97.4,189.2,93.7,192.9,88.1z"></path>
+                          </g>
+                        </g>
+                        <circle class="st30" cx="124.4" cy="128.8" r="108.2"></circle>
+                      </g>
+                    </svg></a></li>
+                <li class="list-inline-item"><a href="https://www.facebook.com/nationallibraryofmedicine"
+                    aria-label="Facebook" rel="noopener noreferrer" target="_blank">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                      y="0px" viewBox="0 0 249 249" style="enable-background:new 0 0 249 249;" xml:space="preserve">
+                      <style type="text/css">
+                        .st10 {
+                          fill: #FFFFFF;
+                        }
+
+                        .st110 {
+                          fill: none;
+                          stroke: #FFFFFF;
+                          stroke-width: 8;
+                          stroke-miterlimit: 10;
+                        }
+                      </style>
+                      <title>SM-Facebook</title>
+                      <g>
+                        <g>
+                          <path class="st10" d="M159,99.1h-24V88.4c0-5,3.3-6.2,5.7-6.2h16.8V60l-24.4-0.1c-22.1,0-26.2,16.5-26.2,27.1v12.1H90v22.5h16.9
+                                                      v67.5H135v-67.5h21.7L159,99.1z"></path>
+                        </g>
+                      </g>
+                      <circle class="st110" cx="123.6" cy="123.2" r="108.2"></circle>
+                    </svg>
+                  </a></li>
+                <li class="list-inline-item"><a href="https://www.youtube.com/user/NLMNIH" aria-label="Youtube"
+                    target="_blank" rel="noopener noreferrer"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 249 249"
+                      style="enable-background:new 0 0 249 249;" xml:space="preserve">
+                      <title>SM-Youtube</title>
+                      <style type="text/css">
+                        .st4 {
+                          fill: none;
+                          stroke: #FFFFFF;
+                          stroke-width: 8;
+                          stroke-miterlimit: 10;
+                        }
+
+                        .st5 {
+                          fill: #FFFFFF;
+                        }
+                      </style>
+                      <circle class="st4" cx="124.2" cy="123.4" r="108.2"></circle>
+                      <g transform="translate(0,-952.36218)">
+                        <path class="st5"
+                          d="M88.4,1037.4c-10.4,0-18.7,8.3-18.7,18.7v40.1c0,10.4,8.3,18.7,18.7,18.7h72.1c10.4,0,18.7-8.3,18.7-18.7
+                                            v-40.1c0-10.4-8.3-18.7-18.7-18.7H88.4z M115.2,1058.8l29.4,17.4l-29.4,17.4V1058.8z"></path>
+                      </g>
+                    </svg></a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-12">
+              <p class="address_footer text-white">National Library of Medicine<br>
+                <a href="https://www.google.com/maps/place/8600+Rockville+Pike,+Bethesda,+MD+20894/@38.9959508,-77.101021,17z/data=!3m1!4b1!4m5!3m4!1s0x89b7c95e25765ddb:0x19156f88b27635b8!8m2!3d38.9959508!4d-77.0988323"
+                  class="text-white" target="_blank" rel="noopener noreferrer">8600 Rockville Pike<br>
+                  Bethesda, MD 20894</a></p>
+            </div>
+            <div class="col-lg-3 col-12 centered-lg">
+              <p><a href="https://www.nlm.nih.gov/web_policies.html" class="text-white">Web Policies</a><br>
+                <a href="https://www.nih.gov/institutes-nih/nih-office-director/office-communications-public-liaison/freedom-information-act-office"
+                  class="text-white">FOIA</a><br>
+                <a href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html" class="text-white" id="vdp">HHS Vulnerability Disclosure</a></p>
+            </div>
+            <div class="col-lg-3 col-12 centered-lg">
+              <p><a class="supportLink text-white" href="https://support.nlm.nih.gov/">Help</a><br>
+                <a href="https://www.nlm.nih.gov/accessibility.html" class="text-white">Accessibility</a><br>
+                <a href="https://www.nlm.nih.gov/careers/careers.html" class="text-white">Careers</a></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 centered-lg">
+              <nav class="bottom-links">
+                <ul class="mt-3">
+                  <li>
+                    <a class="text-white" href="//www.nlm.nih.gov/">NLM</a>
+                  </li>
+                  <li>
+                    <a class="text-white"
+                  href="https://www.nih.gov/">NIH</a>
+                  </li>
+                  <li>
+                    <a class="text-white" href="https://www.hhs.gov/">HHS</a>
+                  </li>
+                  <li>
+                    <a
+                  class="text-white" href="https://www.usa.gov/">USA.gov</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+ <!-- ========== END FOOTER ========== -->
+  <!-- javascript to inject NWDS meta tags. Note: value of nwds_version is updated by "npm version" command -->
+ 
+  <script type="text/javascript">
+    var nwds_version = "1.1.9-2";
+
+    var meta_nwds_ver = document.createElement('meta');
+    meta_nwds_ver.name = 'ncbi_nwds_ver';
+    meta_nwds_ver.content = nwds_version;
+    document.getElementsByTagName('head')[0].appendChild(meta_nwds_ver);
+
+    var meta_nwds = document.createElement('meta');
+    meta_nwds.name = 'ncbi_nwds';
+    meta_nwds.content = 'yes';
+    document.getElementsByTagName('head')[0].appendChild(meta_nwds);
+
+	var alertsUrl = "/core/alerts/alerts.js";
+	if (typeof ncbiBaseUrl !== 'undefined') {
+		alertsUrl = ncbiBaseUrl + alertsUrl;
+	}
+  </script>
+
+
+
+  
+    <!-- JavaScript -->
+    <script src="/pmc/static/CACHE/js/output.0f72d6a64937.js"></script>
+  
+  
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+          integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+          crossorigin="anonymous">
+    </script>
+    <script>
+        var fallbackJquery = "/pmc/static/base/js/jquery-3.5.0.min.js";
+        window.jQuery || document.write("<script src=" + fallbackJquery + ">\x3C/script>")
+    </script>
+  
+
+  <script src="/pmc/static/CACHE/js/output.a212a9fcf845.js"></script>
+<script src="/pmc/static/CACHE/js/output.7999321d1aac.js"></script>
+<script src="/pmc/static/CACHE/js/output.7ca436b2ea51.js"></script>
+<script src="/pmc/static/CACHE/js/output.f8422046fbe0.js"></script>
+<script src="/pmc/static/CACHE/js/output.ff40c7d85ff8.js"></script>
+<script src="/pmc/static/CACHE/js/output.a6a84a0ad361.js"></script>
+
+<script type="text/javascript" src="/pmc/static/bundles/base/base.038d36e4e31104b40a19.js" ></script>
+
+    <script type="text/javascript">
+        if(typeof jQuery !=='undefined') {
+            jQuery.migrateMute = true;
+        }
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.4.1.js"></script>
+    <script type="text/javascript" src="/core/jig/1.15.2/js/jig.nojquery.min.js">//</script><script type="text/javascript" src="/corehtml/pmc/js/common.min.js?_=3.18">//</script><script type="text/javascript" src="/corehtml/pmc/js/NcbiTagServer.min.js?_=3.18">//</script><script type="text/javascript" src="/corehtml/pmc/js/crb.min.js?_=3.18">//</script><script type="text/javascript" src="/corehtml/pmc/js/jactions.min.js?_=3.18">//</script><script type="text/javascript">window.name="mainwindow";</script>
+
+    <script type="text/javascript">var exports = {};</script>
+    <script src="/pmc/static/CACHE/js/output.340a3b9cce7f.js"></script>
+<script src="/pmc/static/CACHE/js/output.228f96f3298e.js"></script>
+    <script type="text/javascript" src="/pmc/static/bundles/article/article.b7dd20e527283dd68f45.js" ></script>
+    <script type="text/javascript">
+        window.ncbi.pmc.articlePage.init({ pageURL: '/pmc/articles/PMC2996198/', citeCookieName: 'pmc-cf'});
+    </script>
+
+
+  
+  
+  <script  type="text/javascript" src="https://www.ncbi.nlm.nih.gov/core/pinger/pinger.js"> </script>
+
+
+  
+      
+  
+
+</body>
+</html>

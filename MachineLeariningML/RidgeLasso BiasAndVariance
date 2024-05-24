@@ -1,0 +1,40 @@
+Bias->Bias means the distance between predicted value and actual(target value)
+      high bias means high gap between predicted value and actual(target value)
+      low bias neans low gap between predicted value and actual(target value)
+
+variance->It refers to how much point in prediction is scattered
+           high variance means they are scattered too much
+           low variance means the exist closer
+
+
+Before diving into to Ridge we have to know about Regularization
+
+focus on highest  Regression coeffcient
+but we need high computational power to perform calculation for the higher value
+so we need to do something to reduce the computation
+so to shrink the magnitude or to scale down of Regression coefficient we have to use REGULARIZATION
+
+Therefore we have 2 ways to perfome Regularization
+1>Ridge Regression
+2>Lasso Regression
+
+                                      Ridge
+                                     -------
+
+Ridge=Loss + Penalty
+Cost Function = Loss + alpha*||w||^2
+
+loss=difference between actual and predicted
+penalty=Alpha(||w||)^2
+TO compensate loss we add Penalty
+and the other advantage of adding penalty is to shrinks the magnitude
+as the value of alpha increases then coefficient of magnitude decreases
+
+                                       Lasso
+                                     _________
+
+Lasso=Loss + alpha * ||w||
+it eleminates the less effective coloumn but in case of ridge the coloumn's magnitude was lessen not zero
+that is in case of lasso manitude can reach zero
+it reduces complexity as well as features
+

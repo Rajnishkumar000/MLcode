@@ -1,0 +1,6 @@
+Multicollinearity is a statistical phenomenon that occurs when two or more independent variables in a regression model
+are highly correlated with each other, indicating a strong linear relationship among the predictor variables.0
+This can lead to skewed or misleading results when a researcher or analyst attempts to determine how well each independent
+variable can be used most effectively to predict or understand the dependent variable in a statistical model.2 If the degree of correlation
+between variables is high enough, it can cause problems when fitting the model and interpreting the results.3
+Multicollinearity can wreak havoc on the analysis and limit the research conclusions we can draw

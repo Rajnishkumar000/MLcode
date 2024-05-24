@@ -1,0 +1,8 @@
+Underfitting->Even for the training data errror is very high for the test data also accuracy is less.
+Overfitting->For the training data it gives very good result but for the test data accuracy goes down.
+
+Low bias and Low variance is preffered
+
+Underfitting-High bias and high variance
+
+overfitting-Low bias and high variance
